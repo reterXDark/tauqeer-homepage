@@ -44,32 +44,10 @@ const Home = () => (
   <Layout>
     <Container>
       <Box
-        borderRadius="lg"
-        mb={6}
-        p={3}
-        mt={10}
-        py={3}
-        textAlign="center"
-        bgGradient="linear(to-l, #7928CA, #FF0080)"
-        fontFamily='"JetBrains Mono", sans-serif'
-        fontSize={15}
-        css={{ backdropFilter: 'blur(10px)' }}
-      >
-        <p>I'm a Software Engineer (Full Stack Developer).</p>
-
-        <Link
-          href="https://github.com/reterXDark"
-          isExternal
-          color={'blackAlpha.900'}
-        >
-          See Github <ExternalLinkIcon mx="1px" />
-        </Link>
-      </Box>
-
-      <Box
         display={{ md: 'flex' }}
         fontFamily='"JetBrains Mono", sans-serif'
         fontWeight={'normal'}
+        mt={10}
       >
         <Box flexGrow={1}>
           <Heading as="h1" variant="page-title" fontWeight={'black'}>
@@ -117,38 +95,57 @@ const Home = () => (
           Islamic Podcast.
         </Paragraph>
       </Section>
-
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-          Biography
+          Education
         </Heading>
         <BioSection>
-          <BioYear>1996</BioYear>
-          Born in Sahiwal (ساہِيوال), Pakistan.
-        </BioSection>
-        <BioSection>
           <BioYear>2021</BioYear>
-          Completed the Bechelors Program in Computer Science at National
-          Textile University, Faisalabad (نیشنل ٹیکسٹائل یونیورسٹی, فیصل آباد)
-        </BioSection>
-        <BioSection>
-          <BioYear>2021</BioYear>
-          Worked at The Codeditors Karachi, Pakistan
-        </BioSection>
-        <BioSection>
-          <BioYear>2022 to present</BioYear>
-          Works as a freelancer
+          Completed the Bechelors Program in Computer Science at{' '}
+          <Link
+            href="https://trailfive.com/"
+            fontWeight="extrabold"
+            target={'_blank'}
+          >
+            National Textile University, Faisalabad (نیشنل ٹیکسٹائل یونیورسٹی,
+            فیصل آباد)
+          </Link>
         </BioSection>
       </Section>
 
-      <Section delay={0.3}>
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Work Experience
+        </Heading>
+        <BioSection>
+          <BioYear>2021</BioYear>
+          Worked as Software Engineer
+          <Link fontWeight="extrabold" target={'_blank'}>
+            {' '}
+            The Codeditors, Karachi
+          </Link>
+        </BioSection>
+        <BioSection>
+          <BioYear>2022</BioYear>
+          Works as a Software Engineer at{' '}
+          <Link
+            href="https://trailfive.com/"
+            target={'_blank'}
+            fontWeight="extrabold"
+          >
+            Trailfive Technologies, Islamabad
+          </Link>
+        </BioSection>
+      </Section>
+
+      {/* <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
         <Paragraph>
           Islamic Podcast, designing, Photography, Programming.
         </Paragraph>
-      </Section>
+      </Section> */}
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
@@ -163,18 +160,6 @@ const Home = () => (
                 leftIcon={<IoLogoGithub />}
               >
                 See my github!
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="#" target="_top">
-              <Button
-                // variant="ghost"
-                colorScheme="red"
-                leftIcon={<IoLogoClosedCaptioning />}
-                disabled={true}
-              >
-                This Section is Under Developement Phase!
               </Button>
             </Link>
           </ListItem>
@@ -246,14 +231,14 @@ const Home = () => (
                 colorScheme="purple"
                 leftIcon={<IoLogoReact />}
               >
-                Redux
+                Redux Toolkit
               </Button>
             </Link>
           </ListItem>
         </List>
 
         <Heading as="h3" variant="section-title">
-          Socials
+          on Web
         </Heading>
         <List>
           <ListItem>
@@ -268,17 +253,6 @@ const Home = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="#" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @reterX_Dark (English)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
             <Link href="https://instagram.com/ig_.taukeer" target="_blank">
               <Button
                 variant="ghost"
@@ -286,20 +260,6 @@ const Home = () => (
                 leftIcon={<IoLogoInstagram />}
               >
                 @ig_.taukeer
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="https://www.facebook.com/tauqeernasir97"
-              target="_blank"
-            >
-              <Button
-                variant="ghost"
-                colorScheme="facebook"
-                leftIcon={<IoLogoFacebook />}
-              >
-                @tauqeernasir97
               </Button>
             </Link>
           </ListItem>

@@ -23,7 +23,7 @@ const Posts = () => (
   <Layout title="Posts">
     <Container centerContent={true}>
       <Heading as="h3" fontSize={20} mb={4}>
-        Popular Blogs
+        Popular Works
       </Heading>
 
       <Section delay={0.1}>
