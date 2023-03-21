@@ -44,16 +44,27 @@ const Home = () => (
   <Layout>
     <Container>
       <Box
-        display={{ md: 'flex' }}
+        borderRadius="lg"
+        mb={6}
+        p={3}
+        textAlign="center"
         fontFamily='"JetBrains Mono", sans-serif'
-        fontWeight={'normal'}
+        css={{ backdropFilter: 'blur(10px)' }}
         mt={10}
       >
         <Box flexGrow={1}>
           <Heading as="h1" variant="page-title" fontWeight={'black'}>
             Tauqeer Nasir
           </Heading>
-          <p>Software Engineer.</p>
+          <Heading
+            as="h2"
+            color={'GrayText'}
+            variant="page-title"
+            fontWeight={'light'}
+            fontSize={20}
+          >
+            Software Engineer
+          </Heading>
         </Box>
         <Box
           flexShrink={0}
@@ -62,17 +73,18 @@ const Home = () => (
           textAlign="center"
         >
           <Box
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
+            // borderColor="whiteAlpha.800"
+            // borderWidth={2}
             borderStyle="solid"
             w="100px"
             h="100px"
             display="inline-block"
             borderRadius="full"
             overflow="hidden"
+            mt={5}
           >
             <ProfileImage
-              src="/images/tauqeer.png"
+              src="/images/tauqeer.jpg"
               alt="Profile image"
               borderRadius="full"
               width="100%"
@@ -91,8 +103,7 @@ const Home = () => (
           Mobile & Web Apllication based in Pakistan with a passion for building
           digital services/stuff he wants. He has a knack for all things
           launching products, from planning and designing all the way to solving
-          real-life problems with code. When not online, he loves to listen
-          Islamic Podcast.
+          real-life problems with code.
         </Paragraph>
       </Section>
       <Section delay={0.2}>
@@ -107,8 +118,7 @@ const Home = () => (
             fontWeight="extrabold"
             target={'_blank'}
           >
-            National Textile University, Faisalabad (نیشنل ٹیکسٹائل یونیورسٹی,
-            فیصل آباد)
+            National Textile University, Faisalabad.
           </Link>
         </BioSection>
       </Section>
@@ -137,15 +147,6 @@ const Home = () => (
           </Link>
         </BioSection>
       </Section>
-
-      {/* <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          I ♥
-        </Heading>
-        <Paragraph>
-          Islamic Podcast, designing, Photography, Programming.
-        </Paragraph>
-      </Section> */}
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
@@ -198,7 +199,7 @@ const Home = () => (
                 colorScheme="twitter"
                 leftIcon={<IoLogoReact />}
               >
-                React Native (Complete iOS & Android Apps)
+                React Native
               </Button>
             </Link>
           </ListItem>
