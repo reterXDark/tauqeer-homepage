@@ -32,13 +32,42 @@ import {
   IoLogoCodepen,
   IoLogoClosedCaptioning
 } from 'react-icons/io5'
+import { GrMysql } from 'react-icons/gr'
 import thumbYouTube from '../public/images/links/youtube.png'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import Image from 'next/image'
+import { useEffect } from 'react'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
+
+const formatDateRange = (startDate, endDate) => {
+  const start = new Date(startDate)
+  const end = endDate ? new Date(endDate) : new Date()
+  const months =
+    (end.getFullYear() - start.getFullYear()) * 12 +
+    (end.getMonth() - start.getMonth())
+  const duration = months <= 0 ? 1 : months
+  const formattedStart = new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    year: 'numeric'
+  }).format(start)
+  const formattedEnd = endDate
+    ? new Intl.DateTimeFormat('en-US', {
+        month: 'long',
+        year: 'numeric'
+      }).format(end)
+    : 'Present'
+  return `${formattedStart} - ${formattedEnd} • ${
+    duration > 12
+      ? `${Math.round((duration + 1) / 12)} Years`
+      : `${duration + 1} ${duration > 1 ? 'Mos' : 'Month'}`
+  }`
+}
+
+var startDate1 = new Date('2021-06-01')
+var endDate1 = new Date('2021-10-31')
 
 const Home = () => (
   <Layout>
@@ -110,16 +139,20 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Education
         </Heading>
+        <BioSection>Bachelor in Computer Science</BioSection>
         <BioSection>
-          <BioYear>2021</BioYear>
-          Completed the Bechelors Program in Computer Science at{' '}
           <Link
-            href="https://trailfive.com/"
+            href="https://ntu.edu.pk/"
             fontWeight="extrabold"
             target={'_blank'}
           >
-            National Textile University, Faisalabad.
+            {' '}
+            National Textile University.
           </Link>
+        </BioSection>
+        <BioSection>{'October 2017 - October 2021'}</BioSection>
+        <BioSection color={'GrayText'} mb={10}>
+          Faisalabad, Pakistan
         </BioSection>
       </Section>
 
@@ -127,25 +160,36 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Work Experience
         </Heading>
-        <BioSection>
-          <BioYear>2021</BioYear>
-          Worked as Software Engineer
-          <Link fontWeight="extrabold" target={'_blank'}>
-            {' '}
-            The Codeditors, Karachi
-          </Link>
-        </BioSection>
-        <BioSection>
-          <BioYear>2022</BioYear>
-          Works as a Software Engineer at{' '}
-          <Link
-            href="https://trailfive.com/"
-            target={'_blank'}
-            fontWeight="extrabold"
-          >
-            Trailfive Technologies, Islamabad
-          </Link>
-        </BioSection>
+        <>
+          <BioSection>Software Engineer</BioSection>
+          <BioSection>
+            <Link fontWeight="extrabold" target={'_blank'}>
+              {' '}
+              The Codeditors • Full-time
+            </Link>
+          </BioSection>
+          <BioSection>{formatDateRange(startDate1, endDate1)}</BioSection>
+          <BioSection color={'GrayText'} mb={10}>
+            Karachi, Pakistan
+          </BioSection>
+        </>
+        <>
+          <BioSection>Software Engineer</BioSection>
+          <BioSection>
+            <Link
+              fontWeight="extrabold"
+              target={'_blank'}
+              href="https://trailfive.com/"
+            >
+              {' '}
+              TrailFive Technologies • Full-time
+            </Link>
+          </BioSection>
+          <BioSection>{formatDateRange(new Date('2022-07-01'))}</BioSection>
+          <BioSection color={'GrayText'} mb={10}>
+            Islamabad, Pakistan
+          </BioSection>
+        </>
       </Section>
 
       <Section delay={0.3}>
@@ -222,6 +266,17 @@ const Home = () => (
                 leftIcon={<IoLogoFirebase />}
               >
                 Firebase
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://www.mysql.com/" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="yellow"
+                leftIcon={<GrMysql />}
+              >
+                MySQL
               </Button>
             </Link>
           </ListItem>
