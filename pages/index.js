@@ -163,19 +163,6 @@ const Home = () => (
         <>
           <BioSection>Software Engineer</BioSection>
           <BioSection>
-            <Link fontWeight="extrabold" target={'_blank'}>
-              {' '}
-              The Codeditors • Full-time
-            </Link>
-          </BioSection>
-          <BioSection>{formatDateRange(startDate1, endDate1)}</BioSection>
-          <BioSection color={'GrayText'} mb={10}>
-            Karachi, Pakistan
-          </BioSection>
-        </>
-        <>
-          <BioSection>Software Engineer</BioSection>
-          <BioSection>
             <Link
               fontWeight="extrabold"
               target={'_blank'}
@@ -188,6 +175,19 @@ const Home = () => (
           <BioSection>{formatDateRange(new Date('2022-07-01'))}</BioSection>
           <BioSection color={'GrayText'} mb={10}>
             Islamabad, Pakistan
+          </BioSection>
+        </>
+        <>
+          <BioSection>Software Engineer</BioSection>
+          <BioSection>
+            <Link fontWeight="extrabold" target={'_blank'}>
+              {' '}
+              The Codeditors • Full-time
+            </Link>
+          </BioSection>
+          <BioSection>{formatDateRange(startDate1, endDate1)}</BioSection>
+          <BioSection color={'GrayText'} mb={10}>
+            Karachi, Pakistan
           </BioSection>
         </>
       </Section>
