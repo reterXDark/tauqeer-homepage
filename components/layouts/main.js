@@ -24,7 +24,7 @@ const Main = ({ children, router }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@reterX_Dark" />
         <meta name="twitter:creator" content="@reterX_Dark" />
-        <meta name="twitter:image" content="#" />
+        <meta name="twitter:image" content="%PUBLIC%/card.png" />
         <meta property="og:site_name" content="Tauqeer Nasir" />
         <meta name="og:title" content="Tauqeer Nasir" />
         <meta property="og:type" content="website" />
