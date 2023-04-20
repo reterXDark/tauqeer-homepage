@@ -32,7 +32,9 @@ import {
   IoLogoCodepen,
   IoLogoClosedCaptioning
 } from 'react-icons/io5'
-import { GrMysql } from 'react-icons/gr'
+import { GrGraphQl, GrMysql } from 'react-icons/gr'
+import { SiNetlify, SiRedux, SiSemanticuireact } from 'react-icons/si'
+import { TbBrandReactNative } from 'react-icons/tb'
 import thumbYouTube from '../public/images/links/youtube.png'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import Image from 'next/image'
@@ -128,32 +130,13 @@ const Home = () => (
           Introduction
         </Heading>
         <Paragraph>
-          Tauqeer is a Software Engineer with 2 Years of Experience in Both
-          Mobile & Web Apllication based in Pakistan with a passion for building
-          digital services/stuff he wants. He has a knack for all things
-          launching products, from planning and designing all the way to solving
-          real-life problems with code.
+          Hi, I'm a software engineer with experience in designing and
+          developing software applications using JavaScript, TypeScript, and
+          React. I enjoy creating dynamic and interactive web applications that
+          provide a seamless user experience. I'm passionate about staying
+          up-to-date with the latest technologies and using them to solve
+          complex problems.
         </Paragraph>
-      </Section>
-      <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
-          Education
-        </Heading>
-        <BioSection>Bachelor in Computer Science</BioSection>
-        <BioSection>
-          <Link
-            href="https://ntu.edu.pk/"
-            fontWeight="extrabold"
-            target={'_blank'}
-          >
-            {' '}
-            National Textile University.
-          </Link>
-        </BioSection>
-        <BioSection>{'October 2017 - October 2021'}</BioSection>
-        <BioSection color={'GrayText'} mb={10}>
-          Faisalabad, Pakistan
-        </BioSection>
       </Section>
 
       <Section delay={0.2}>
@@ -191,27 +174,30 @@ const Home = () => (
           </BioSection>
         </>
       </Section>
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Education
+        </Heading>
+        <BioSection>Bachelor in Computer Science</BioSection>
+        <BioSection>
+          <Link
+            href="https://ntu.edu.pk/"
+            fontWeight="extrabold"
+            target={'_blank'}
+          >
+            {' '}
+            National Textile University.
+          </Link>
+        </BioSection>
+        <BioSection>{'October 2017 - October 2021'}</BioSection>
+        <BioSection color={'GrayText'} mb={10}>
+          Faisalabad, Pakistan
+        </BioSection>
+      </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          Projects
-        </Heading>
-        <List>
-          <ListItem>
-            <Link href="https://github.com/reterXDark" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="gray"
-                leftIcon={<IoLogoGithub />}
-              >
-                See my github!
-              </Button>
-            </Link>
-          </ListItem>
-        </List>
-
-        <Heading as="h3" variant="section-title">
-          Skills
+          Tech Stack
         </Heading>
         <List>
           <ListItem>
@@ -241,9 +227,16 @@ const Home = () => (
               <Button
                 variant="ghost"
                 colorScheme="twitter"
-                leftIcon={<IoLogoReact />}
+                leftIcon={<TbBrandReactNative />}
               >
                 React Native
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://redux-toolkit.js.org/" target="_blank">
+              <Button variant="ghost" leftIcon={<SiRedux />} color={'#764abc'}>
+                Redux Toolkit
               </Button>
             </Link>
           </ListItem>
@@ -251,10 +244,22 @@ const Home = () => (
             <Link href="https://nodejs.org/en/" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="green"
                 leftIcon={<IoLogoNodejs />}
+                color={'#6cc24a'}
               >
-                Node.js (Rest APIs)
+                Node.js (REST APIs)
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://redux-toolkit.js.org/" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="purple"
+                leftIcon={<GrGraphQl />}
+                color={'#e535ab'}
+              >
+                GraphQl
               </Button>
             </Link>
           </ListItem>
@@ -262,8 +267,8 @@ const Home = () => (
             <Link href="https://firebase.google.com/" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="yellow"
                 leftIcon={<IoLogoFirebase />}
+                color={'#ffca28'}
               >
                 Firebase
               </Button>
@@ -271,29 +276,26 @@ const Home = () => (
           </ListItem>
           <ListItem>
             <Link href="https://www.mysql.com/" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="yellow"
-                leftIcon={<GrMysql />}
-              >
+              <Button variant="ghost" leftIcon={<GrMysql />} color={'#f29111'}>
                 MySQL
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://firebase.google.com/" target="_blank">
+            <Link href="https://www.mysql.com/" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="purple"
-                leftIcon={<IoLogoReact />}
+                // colorScheme="#20c6b7"
+                leftIcon={<SiNetlify />}
+                color={'#20c6b7'}
               >
-                Redux Toolkit
+                Netlify
               </Button>
             </Link>
           </ListItem>
         </List>
 
-        <Heading as="h3" variant="section-title">
+        {/* <Heading as="h3" variant="section-title">
           on Web
         </Heading>
         <List>
@@ -319,7 +321,7 @@ const Home = () => (
               </Button>
             </Link>
           </ListItem>
-        </List>
+        </List> */}
       </Section>
     </Container>
   </Layout>

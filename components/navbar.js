@@ -74,9 +74,9 @@ const Navbar = props => {
           {/* <LinkItem href="#" path={path}>
             Projects
           </LinkItem> */}
-          <LinkItem href="/posts" path={path}>
+          {/* <LinkItem href="/posts" path={path}>
             Works
-          </LinkItem>
+          </LinkItem> */}
           <LinkItem
             target="_blank"
             href="https://github.com/reterXDark"
