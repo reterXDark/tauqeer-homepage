@@ -94,7 +94,7 @@ const Home = () => (
             fontWeight={'light'}
             fontSize={20}
           >
-            Software Engineer
+            Full Stack Engineer
           </Heading>
         </Box>
         <Box
@@ -115,7 +115,7 @@ const Home = () => (
             mt={5}
           >
             <ProfileImage
-              src="/images/tauqeer.jpg"
+              src="/images/tauqeer.jpeg"
               alt="Profile image"
               borderRadius="full"
               width="100%"
@@ -130,7 +130,7 @@ const Home = () => (
           Introduction
         </Heading>
         <Paragraph>
-          Hi, I'm a software engineer with experience in designing and
+          Hi, I'm a Full-stack engineer with 3 Years experience in designing and
           developing software applications using JavaScript, TypeScript, and
           React. I enjoy creating dynamic and interactive web applications that
           provide a seamless user experience. I'm passionate about staying
@@ -212,7 +212,7 @@ const Home = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://reactjs.org/" target="_blank">
+            <Link href="https://react.dev/" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="blue"
@@ -252,7 +252,7 @@ const Home = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://redux-toolkit.js.org/" target="_blank">
+            <Link href="https://graphql.org/" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="purple"
@@ -282,7 +282,7 @@ const Home = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://www.mysql.com/" target="_blank">
+            <Link href="https://www.netlify.com/" target="_blank">
               <Button
                 variant="ghost"
                 // colorScheme="#20c6b7"
