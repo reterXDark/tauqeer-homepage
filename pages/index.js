@@ -33,7 +33,7 @@ import {
   IoLogoClosedCaptioning
 } from 'react-icons/io5'
 import { GrGraphQl, GrMysql } from 'react-icons/gr'
-import { SiNetlify, SiRedux, SiSemanticuireact } from 'react-icons/si'
+import { SiNetlify, SiRedux, SiSemanticuireact, SiPrisma } from 'react-icons/si'
 import { TbBrandReactNative } from 'react-icons/tb'
 import thumbYouTube from '../public/images/links/youtube.png'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
@@ -115,7 +115,7 @@ const Home = () => (
             mt={5}
           >
             <ProfileImage
-              src="/images/tauqeer.jpeg"
+              src="/images/tauqeer.jpg"
               alt="Profile image"
               borderRadius="full"
               width="100%"
@@ -278,6 +278,13 @@ const Home = () => (
             <Link href="https://www.mysql.com/" target="_blank">
               <Button variant="ghost" leftIcon={<GrMysql />} color={'#f29111'}>
                 MySQL
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://www.prisma.io/" target="_blank">
+              <Button variant="ghost" leftIcon={<SiPrisma />} color={'#002699'}>
+                PrismaORM
               </Button>
             </Link>
           </ListItem>
