@@ -62,8 +62,10 @@ const formatDateRange = (startDate, endDate) => {
       }).format(end)
     : 'Present'
   return `${formattedStart} - ${formattedEnd} • ${
-    duration > 12
-      ? `${Math.round((duration + 1) / 12)} Years`
+    duration >= 11
+      ? `${Math.round((duration + 1) / 12)} 
+      ${duration - 12 === 0 ? `year` : `year`}
+       ${duration > 11 ? `${duration - 12} Mos` : ''}`
       : `${duration + 1} ${duration > 1 ? 'Mos' : 'Month'}`
   }`
 }
@@ -94,7 +96,7 @@ const Home = () => (
             fontWeight={'light'}
             fontSize={20}
           >
-            Full Stack Engineer
+            Software Engineer
           </Heading>
         </Box>
         <Box
@@ -130,7 +132,7 @@ const Home = () => (
           Introduction
         </Heading>
         <Paragraph>
-          Hi, I'm a Full-stack engineer with 3 Years experience in designing and
+          Hi, I'm a Software Engineer with 3 Years experience in designing and
           developing software applications using JavaScript, TypeScript, and
           React. I enjoy creating dynamic and interactive web applications that
           provide a seamless user experience. I'm passionate about staying
